@@ -1,0 +1,47 @@
+name: finzen
+description: Saúde financeira com IA pessoal — scan de comprovantes e chat inteligente.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Firebase ---
+  firebase_core: ^3.0.0
+  firebase_auth: ^5.0.0
+  cloud_firestore: ^5.0.0
+  google_sign_in: ^6.2.0
+
+  # --- OCR e câmera ---
+  google_mlkit_text_recognition: ^0.13.0
+  image_picker: ^1.1.0
+
+  # --- HTTP (chamadas à API do Claude) ---
+  http: ^1.2.0
+
+  # --- UI e gráficos ---
+  fl_chart: ^0.68.0
+
+  # --- Variáveis de ambiente ---
+  flutter_dotenv: ^5.1.0
+
+  # --- Gerenciamento de estado ---
+  provider: ^6.1.0
+
+  # --- Utilitários ---
+  intl: ^0.19.0
+  uuid: ^4.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
