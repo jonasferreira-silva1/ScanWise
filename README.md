@@ -161,7 +161,7 @@ flutter run
 Projeto pessoal desenvolvido por **Jonas Ferreira da Silva** como parte do meu portfólio de desenvolvimento de software.
 
 - GitHub: [@jonasferreira-silva1](https://github.com/jonasferreira-silva1)
-- LinkedIn: [jonas-silva01](https://linkedin.com/in/jonas-silva01)
+- LinkedIn: [jonas-silva01](https://www.linkedin.com/in/jonas-silva01/)
 
 Se quiser trocar ideia sobre o projeto ou tiver sugestões, abre uma issue ou me manda uma mensagem no LinkedIn.
 
