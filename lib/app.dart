@@ -46,15 +46,24 @@ class FinZenApp extends StatelessWidget {
       ),
       scaffoldBackgroundColor: AppColors.fundo,
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.primaria,
-        foregroundColor: Colors.white,
+        backgroundColor: AppColors.superficie,
+        foregroundColor: AppColors.textoPrincipal,
         elevation: 0,
+        centerTitle: false,
       ),
       cardTheme: CardTheme(
-        elevation: 2,
+        elevation: 0,
+        color: AppColors.superficie,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(16),
         ),
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: AppColors.superficie,
+        selectedItemColor: AppColors.primaria,
+        unselectedItemColor: AppColors.textoSecundario,
+        type: BottomNavigationBarType.fixed,
+        elevation: 8,
       ),
     );
   }
@@ -77,7 +86,7 @@ class _AuthGate extends StatelessWidget {
           );
         }
 
-        // Usuário autenticado → Dashboard
+        // Usuário autenticado → Dashboard (com navegação por abas)
         if (snapshot.hasData) {
           return const DashboardPage();
         }
