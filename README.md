@@ -1,10 +1,10 @@
-# FinZen 💰
+# ScanWise 💰
 
 > 72% dos brasileiros não controlam os próprios gastos. Não é falta de vontade — é falta de praticidade.
 
 Todos os apps de finanças falham pelo mesmo motivo: exigem digitação manual de cada gasto. Ninguém mantém isso por mais de duas semanas.
 
-**O FinZen resolve com uma foto.**
+**O ScanWise resolve com uma foto.**
 
 Fotografe o comprovante → a IA extrai valor, descrição e categoria automaticamente → o gasto está salvo. Sem digitar nada. E quando quiser entender seus gastos, é só perguntar para o assistente de chat.
 
@@ -105,8 +105,8 @@ lib/
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/jonasferreira-silva1/finzen.git
-cd finzen
+git clone https://github.com/jonasferreira-silva1/ScanWise.git
+cd ScanWise
 
 # 2. Configure as variáveis de ambiente
 cp .env.example .env
