@@ -136,16 +136,29 @@ flutter run
 
 ---
 
+## Testes
+
+O projeto conta com testes automatizados cobrindo a lógica de negócio crítica.
+
+```bash
+flutter test
+```
+
+Módulos testados: serialização de dados, cálculos financeiros, parsing de resposta da Claude API e tradução de erros do Firebase. Veja [TESTING.md](TESTING.md) para a documentação completa da estratégia de testes.
+
+---
+
 ## Roadmap
 
-**Em desenvolvimento**
-- [ ] Autenticação com Google (Firebase Auth)
-- [ ] Scan de comprovante com ML Kit + Claude API
-- [ ] Salvar transações no Firestore
+**Concluído**
+- [x] Autenticação com Google (Firebase Auth)
+- [x] Scan de comprovante com ML Kit + Claude API
+- [x] Salvar transações no Firestore
+- [x] Chat financeiro com histórico de contexto
+- [x] Dashboard com gráficos (fl_chart)
+- [x] Testes automatizados com documentação
 
 **Próximas etapas**
-- [ ] Chat financeiro com histórico de contexto
-- [ ] Dashboard com gráficos (fl_chart)
 - [ ] Alertas de meta por categoria
 - [ ] Publicar na Play Store (acesso antecipado)
 

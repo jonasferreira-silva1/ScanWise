@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissão de internet — obrigatória para Firebase e Claude API -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Permissão de câmera — usada no scan de comprovantes -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- Permissão de leitura de armazenamento — para selecionar imagens da galeria -->
+    <!-- Android 12 e anteriores -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+
+    <!-- Android 13+ usa permissões granulares por tipo de mídia -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+    <!-- Declara que o app usa câmera (não obrigatório, mas recomendado para Play Store) -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+
+    <application
+        android:label="FinZen"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+
+            <!-- Especifica que o app suporta deep links do Firebase Auth -->
+            <meta-data
+                android:name="flutter_deeplinking_enabled"
+                android:value="true"/>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Não remova a activity do FlutterActivity — necessária para plugins -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2"/>
+
+    </application>
+
+    <!-- Necessário para Android 12+ com image_picker -->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+        </intent>
+    </queries>
+
+</manifest>
